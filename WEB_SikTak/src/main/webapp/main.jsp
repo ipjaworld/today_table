@@ -4,25 +4,25 @@
 <nav class="">
 	<div class="container main-top-area">
 		<div class="main-page-card col-md-6 col-sm-12" id="main-total">
-			<a class="" href="recipe.do?command=recipeCategory&게시판=total&page=1">
+			<a class="" href="recipe.do?command=recipeCategory&status=recipe&page=1">
 				<img src="image/maintable.png" />
 			</a>
 			<div class="main-page-card-black-area"></div>
 		</div>
 		<div class="main-page-card col-md-6 col-sm-12" id="main-type">
-			<a class="" href="recipe.do?command=recipeCategory&게시판=type&page=1">
+			<a class="" href="recipe.do?command=recipeCategory&status=type&page=1">
 				<img src="image/typerecipe.png" />
 			</a>
 			<div class="main-page-card-black-area"></div>
 		</div>
 		<div class="main-page-card col-md-6 col-sm-12" id="main-theme">
-			<a class="" href="recipe.do?command=recipeCategory&게시판=theme&page=1">
+			<a class="" href="recipe.do?command=recipeCategory&status=theme&page=1">
 				<img src="image/themerecipe.png" />
 			</a>
 			<div class="main-page-card-black-area"></div>
 		</div>
 		<div class="main-page-card col-md-6 col-sm-12" id="main-ing">
-			<a class="" href="recipe.do?command=recipeCategory&게시판=ing&page=1">
+			<a class="" href="recipe.do?command=recipeCategory&status=ing&page=1">
 				<img src="image/ingredientsrecipe.png" />
 			</a>
 			<div class="main-page-card-black-area"></div>

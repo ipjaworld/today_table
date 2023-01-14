@@ -420,9 +420,11 @@ public class RecipeDao {
     }
     
     public int getAllCount(String whatIsthis) {
-        int count = 0;
+        // whatIsthis 가 무엇인지에 따라서 조회할 페이지 뷰가 달라집니다.
+    	int count = 0;
+        
         con = Dbman.getConnection();
-        String sql = "select count(*) as cnt from recipe_page_view";
+        String sql = "select count(*) as cnt from " + whatIsthis + "_page_view";
         try {
             pstmt = con.prepareStatement(sql);
             rs = pstmt.executeQuery();
@@ -479,7 +481,7 @@ public class RecipeDao {
         String sql = " select * from ("
                 + " select * from ("
                 + " select rownum as rn, r.*from "
-                + " ((select * from recipe_page_view order by indate desc) r)"
+                + " ((select * from "+whatIsthis+"_page_view) r)"
                 + " ) where rn>=?"
                 + " ) where rn<=?";
         try {

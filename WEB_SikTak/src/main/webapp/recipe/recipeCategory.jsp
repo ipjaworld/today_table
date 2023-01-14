@@ -4,20 +4,22 @@
 
 
 <article class="" id="recipe-category-list">
-<c:if test="${whatIsthis.equals('total')}">
-	<h2><b>전체</b> 레시피 게시판 입니다~</h2>
-</c:if>
-<c:if test="${whatIsthis.equals('type')}">
-	<h2><b>종류별</b> 레시피 게시판 입니다~</h2>
-</c:if>
-<c:if test="${whatIsthis.equals('theme')}">
-	<h2><b>테마별</b> 레시피 게시판 입니다~</h2>
-</c:if>
-<c:if test="${whatIsthis.equals('ing')}">
-	<h2><b>재료별</b> 레시피 게시판 입니다~</h2>
-</c:if>
+<div class="container">
+	<c:if test="${whatIsthis.equals('recipe')}">
+		<h2><b>전체</b> 레시피 게시판 입니다~</h2>
+	</c:if>
+	<c:if test="${whatIsthis.equals('type')}">
+		<h2><b>종류별</b> 레시피 게시판 입니다~</h2>
+	</c:if>
+	<c:if test="${whatIsthis.equals('theme')}">
+		<h2><b>테마별</b> 레시피 게시판 입니다~</h2>
+	</c:if>
+	<c:if test="${whatIsthis.equals('ing')}">
+		<h2><b>재료별</b> 레시피 게시판 입니다~</h2>
+	</c:if>
+</div>
 
-<div class="categoryListTitle">
+<div class="categoryListTitle container">
 총 <b>${total}</b>개의 레시피가 있습니다.
 
 	<!-- 2차때 작업할 영역
@@ -62,7 +64,7 @@
 		</c:forEach>
 	</div>
 	<jsp:include page="/paging/paging.jsp">
-		<jsp:param name="command" value="recipe.do?command=recipeCategory" />
+		<jsp:param name="command" value="recipe.do?command=recipeCategory&status=${whatIsthis}" />
 	</jsp:include>
 </article>
 

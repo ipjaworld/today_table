@@ -20,9 +20,9 @@
 </div>
 
 <div class="recipe-ingredients">
-	재료 : 
+	<span><b>재료&nbsp;</b>ingredients :&nbsp;</span> 
 	<c:forEach items="${Ings}" var="ing">
-		${ing} <br>
+		<pre>${ing}</pre>
 	</c:forEach>
 </div>
 

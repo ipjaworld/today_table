@@ -47,7 +47,7 @@ public class RecipeCategoryAction implements Action {
 			session.removeAttribute("key");
 		}
 		
-		String whatIsthis = request.getParameter("게시판");
+		String whatIsthis = request.getParameter("status");
 		System.out.println(whatIsthis);
 		
 		Paging paging = new Paging();
@@ -60,14 +60,6 @@ public class RecipeCategoryAction implements Action {
 		
 		// 게시물 관련
 		ArrayList<RecipeVO> list = rdao.selectKindAll( paging, whatIsthis);
-		
-		/** 전체 게시물 확인하는 함수와 종류별 레시피를 확인할 수 있는 코드 입니다.
-		ArrayList<RecipeVO> list = rdao.selectKindRecipeList(kind);
-		totalNumber = String.valueOf(rdao.countAll());
-		request.setAttribute("RecipeKindList", list);
-		System.out.println("RecipeCategoryAction에서 실행한 토탈넘버값은"+totalNumber);
-		request.setAttribute("totalNumber", totalNumber);
-		*/
 		
 		// 덧글 관련
 		ArrayList<Integer> replyCountList = rdao.countReply(list);
