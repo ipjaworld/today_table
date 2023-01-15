@@ -15,7 +15,7 @@ public class DeleteRecipeAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "recipe.do?command=recipeCategory&게시판=total"; 
+		String url = "recipe.do?command=recipeCategory&status=total"; 
 		int rnum = Integer.parseInt(request.getParameter("rnum"));
 		HttpSession session = request.getSession();
 		RecipeDao rdao = RecipeDao.getInstance();
