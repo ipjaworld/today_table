@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
+<article class="admin-board container admin-mem-list">
 <h1>회원리스트</h1>  
 <form name="frm" method="post">
 <table class="admin-search-area">
@@ -30,7 +30,7 @@
 	    	<td><fmt:formatDate value="${membersVO.indate}"/></td></tr>
 	  </c:forEach>
 	  <tr>
-	  <th><a href="#" onClick="go_sleep_member();">휴먼회원 전환하기</a></th>
+	  <th><a href="#" onClick="go_sleep_member();">휴면회원 전환하기</a></th>
 	  <tr>
 	</table>
 	<div class="paging-area">

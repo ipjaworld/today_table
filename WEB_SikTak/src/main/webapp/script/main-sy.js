@@ -2,7 +2,7 @@
 $(function(){
 	$('#searchByKey').click(function(){
 		const selected = $('#condition option:selected').val();
-		alert("condition : " + selected);
+		/*alert("condition : " + selected);*/
 		let key = $('#key').val();
 		location.href = "recipe.do?command=recipeList&start='Y'&key="+ key + "&condition=" + selected;
 	});
@@ -234,7 +234,7 @@ function go_recipe(comm){
 	}else{
 		checkIng = $('input[name="checkIng"]').val();
 	} 
-	alert("checkIng : " + checkIng + "divCount : " + divCount ); // 확인용 
+	/*alert("checkIng : " + checkIng + "divCount : " + divCount ); // 확인용*/ 
 	document.frm.action = "recipe.do?command="+comm + "&count="+ divCount;
 	document.frm.submit();
 }
@@ -286,7 +286,7 @@ $(function(){ // 레시피 쓰기/수정에서 '추가' 버튼 눌렀을 때
             $('#add-button').click(function(){
 			let name = $('.recipe-process').length;
 			let i = name + 1;
-			alert("name : " + name);
+			/*alert("name : " + name);*/
 			if( $('.recipe-update-form-process').length >= 1){ // 수정 폼이라면
 				$('div[name="' + name + '"]').after(`<div class="recipe-process" class="recipe-update-form-process"  
 					name="${i}">

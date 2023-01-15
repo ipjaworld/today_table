@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
+<article class="admin-board container admin-rep-list">
 	<h1>댓글리스트</h1>  
 	<form name="frmm" method="post">
 	<table  class="admin-search-area">
@@ -13,7 +13,7 @@
 		<tr><th>번호</th><th>아이디</th><th>레시피 번호</th><th>내용</th><th>작성일자</th></tr>
 	    <c:forEach items="${replyList}" var="replyVO">  
 		    <tr>
-		    <td><input type="checkbox" name="delrp" value="${replyVO.replyseq}">${replyVO.replyseq}</td>
+		    <td><input type="checkbox" name="delrp" value="${replyVO.replyseq}">&nbsp;&nbsp;&nbsp;${replyVO.replyseq}</td>
 		    <td>${replyVO.id}</td><td>${replyVO.rnum}</td><td><a href="#" onClick="go_view('recipeDetailView','rnum','${replyVO.rnum}')">${replyVO.content}</a></td>
 		    <td><fmt:formatDate value="${replyVO.replydate}"/></td></tr>
 	  </c:forEach>

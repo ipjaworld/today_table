@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
+<article class="admin-board container admin-qna-detail">
 	<h1>Q&amp;A 게시판</h1>   
 	<form name="frm" method="post">
 	<input type="hidden" name="qseq" value="${qnaVO.qseq}">

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
+<article class="admin-board container">
 <h1>추천 리스트</h1>
 <jsp:include page="adminRecipeNav.jsp"/>
 
 <form name="frm" method="post">
-	<table style="float: right;">
+	<table class="admin-search-area">
 		<tr><td>제목+내용 검색 
 			<input type="text" name="key" value="${key5}" > 
 			    <input class="btn" type="button" value="검색"   onClick="go_search('adminPickList');">

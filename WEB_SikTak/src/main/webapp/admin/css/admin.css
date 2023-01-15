@@ -7,6 +7,10 @@
 .line-bright-filter { color : #d8d8d8; }
 .very-dark-filter { color : #666; }
 .little-dark-filter { color : #777; }
+
+.container{
+	padding-top: 3vh;	
+}
 body{
 	padding: 0;
 	margin: 0;
@@ -16,21 +20,29 @@ a{
    text-decoration: none;
 }
 header{
+	left: 16vh;
 	width: 100%;
 	position:fixed;
-	background-color: rgba(255, 185, 55, 0.7);
-	padding: 2em 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 1em 0;
 	z-index: 50;
+	margin: 0;
+	border-bottom: 1px solid #d8d8d8;
 }
 main{
-   min-height: 75vh;
-   padding-top: 11em;
+	margin: 0;
+	min-height: 75vh;
+	padding-top: 7.5em;
+	padding-left: 9em;
 }
 footer{
    background: #FFB937;
 }
+.footer-bottom{
+	color: #777;
+}
 td, tr, th{
-	padding: 1vh;
+	padding: 2vh;
 }
 /*
 .pie-chart1 {
@@ -45,18 +57,21 @@ td, tr, th{
    display : flex;
    justify-content: space-between;
    /* flex-direction: row; */
-   margin : 30px 0;
+   margin : 3vh 2vh;
    vertical-align: middle;
 }
 
 #sub_menu { 
    float: left; 
    margin-right: 10px;
-   margin-top: 10em;
    position: fixed;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
+   background: #777;
+   min-height: 100%;
+   padding-top: 2vh;
+   z-index: 90;
 }
 
 
@@ -66,34 +81,51 @@ td, tr, th{
 }
 
 .smi_title{
-   width : 200px;
-   height : 80px;
-   line-height: 80px;
+   width : 14vh;
+   height : 6vh;
    background:gray;
    text-align: center;
    vertical-align: middle;
    border-radius: 10px;
    margin-bottom: 3vh;
+   overflow: hidden;
+   font-size: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.smi_title div a h3{
-   line-height: 80px;
+.smi_title:first-child{
+	margin-top: 9vh;
 }
+
+/*
 .smi_title div a h3:hover{
    color: #D56148;
 }
+*/
+.smi_title:hover, .smi_title:hover a, .smi_title div a:hover{
+	color: #D56148;
+	background: #666;
+}
+.smi_title_selected{
+	color: #D56148;
+	background: #666;
+	cursor: default;
+}
+
+	
 .sub_menu_item a{
    text-decoration: none;
    color : white;
    font: white;
 }
 
-.sub_menu_item:hover .smi_content{
-   height : 80px;
-   transition : 0.5;
-   font-size: 100%;
-   text-align: center;
-}
 
+.admin-main{
+	background: #eee;
+	width: 100%;
+	height: 100%;
+}
 
 .main-top-area{
    margin: 0 auto;
@@ -102,6 +134,11 @@ td, tr, th{
    flex-direction: row;
    justify-content: center;
    flex-wrap: wrap;
+}
+.main-top-area h2{
+	text-align: center;
+	padding-top: 2vh;
+	margin-bottom: 5vh;
 }
 .main-page-card{
    flex: auto;
@@ -113,7 +150,35 @@ td, tr, th{
    height: 30vh;
    transition: 0.5s;
 }
-
+.main-mid-area{
+	width: 100%;
+	margin: 3vh 0;
+}
+.main-mid-area-card{
+	border: 1px solid #777;
+	padding: 1vh;
+	border-radius: 20px;
+	margin-right: 1vh;
+	height: 100%;
+	background: #fff;
+}
+.main-mid-area-card-box{
+	padding: 0;
+}
+.main-btm-area{
+	width: 100%;
+}
+.main-btm-area-box{
+	padding: 0;
+}
+.main-btm-area-card{
+	border: 1px solid #777;
+	padding: 1vh;
+	border-radius: 20px;
+	margin-right: 1vh;
+	height: 100%;
+	background: #fff;
+}
 #main-page-card1{
 	transform-origin: 0 0;
 	background-color: rgba(34, 204, 238, 0.9);
@@ -134,22 +199,35 @@ td, tr, th{
 }
 /* .main-page-card4:hover{
 	transform: scale(210%, 210%);
-} */
+} 
 
 .main-page-card:hover{
 	transform: scale(210%, 210%);
 }
-
-.main-page-card-top{
-	flex: auto;
-   	border: 1px dotted red;
-  	border-radius: 20px;
-  	padding: 20px;
- 	margin: 20px;
-  	width: 50vh;
- 	min-height: 20vh;
- 	transition: 0.5s;
+*/
+.main-today-summary{
+	width: 100%;
+	border: 1px solid #666;
+	border-radius: 20px;
+	background: #fff;
 }
+.main-today-summary-top-area{
+	padding:1vh;
+	display: flex;
+	align-items: center;
+	min-height: 5vh;
+	border-bottom: 1px solid #d8d8d8;
+}
+.main-today-summary-bot-area{
+	padding:1vh;
+	display: flex;
+	align-items: center;
+	min-height: 5vh;
+}
+.main-today-summary-bot-area b{
+	font-size: 135%;
+}
+
 .main-page-card-top h2{
 	float: right;
 	font-size: 500%;
@@ -169,6 +247,25 @@ td, tr, th{
 }
 .admin-board tr{
 	border-bottom: 1px solid #d8d8d8;
+}
+.admin-board h1{
+	margin-bottom: 5vh;
+}
+.admin-qna-detail .btn{
+	position:absolute;
+	right: 47%;
+	bottom: 38%;
+	margin-top: 5vh;
+	padding: 2vh 3vh;
+	background: #d8d8d8;
+}
+.admin-board #qnaList .btn{
+	right: 53%;
+}
+.admin-board .btn:hover{
+	background: #666;
+	color: #FFB937;
+	
 }
 .admin-search-area tr{
 	border-bottom: none;
@@ -195,7 +292,14 @@ td, tr, th{
 .admin-board table{
 	margin: 0 auto;
 }
-
+.admin-mem-list tr, .admin-mem-list th, .admin-mem-list td{
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+.admin-rep-list tr, .admin-rep-list th, .admin-rep-list{
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
 
 .paging-area{
 	width: 100%;
@@ -204,3 +308,4 @@ td, tr, th{
 
 main{
 }
+

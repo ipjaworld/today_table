@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
+<article class="admin-board container">
 <h1>레시피 리스트</h1>
 <jsp:include page="adminRecipeNav.jsp"/>
 
