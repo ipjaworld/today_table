@@ -22,7 +22,7 @@ public class WriteRecipeAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 레시피를 등록한 후 today's table(전체 레시피 리스트)로 이동하는 액션입니다.
 		
-		String url = "recipe.do?command=recipeCategory&게시판=total"; 
+		String url = "recipe.do?command=recipeCategory&status=recipe"; 
 		HttpSession session = request.getSession();
 		
 		RecipeVO rvo = new RecipeVO();
