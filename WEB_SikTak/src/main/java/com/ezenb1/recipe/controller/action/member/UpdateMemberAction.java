@@ -25,8 +25,6 @@ public class UpdateMemberAction implements Action {
 		 
 		 String path = context.getRealPath("imageProfile");
 		 
-		
-		   
 		 try {
 			 MultipartRequest multi = new MultipartRequest(
 		     request,path,5*1024*1024,"UTF-8",new DefaultFileRenamePolicy()

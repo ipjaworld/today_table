@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/admin/admin_header.jsp"%>
 
-<article class="admin-board">
-	<div id="memberdetail">
-		<h1>Item</h1>
+<article class="admin-board container">
+	<div id="memberdetail container">
+		<h1>회원 ${memberVO.name}님의 개인 정보</h1>
 		<form method="post" name="formm">
 		
 			<fieldset>
