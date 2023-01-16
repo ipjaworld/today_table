@@ -11,8 +11,8 @@
          <tr><th>제목</th><td width="500" style="text-align:left;">${qnaVO.qsubject}</td></tr>
          <tr><th>등록일</th><td align="left" style="text-align:left">
             <fmt:formatDate value="${qnaVO.qnadate}" type="date"/></td></tr>
-         <tr><th>질문내용</th><td align="left" style="text-align:left;font-size:115%">
-            <pre>${qnaVO.qcontent}</pre></td></tr>
+         <tr><th>질문내용</th><td id="qna-content-area" align="left" style="text-align:left;font-size:115%">
+            <div>${qnaVO.qcontent}<div></td></tr>
          <tr><th>답변 내용</th><td align="left" style="text-align:left;color:white;">${qnaVO.replyQna}</tr>
       </table><div class="clear"></div>
       <div id="buttons" style="float:right">

@@ -48,7 +48,7 @@ public class RecipeCategoryAction implements Action {
 		}
 		
 		String whatIsthis = request.getParameter("status");
-		System.out.println(whatIsthis);
+		System.out.println("whatIsthis는 "+whatIsthis);
 		
 		Paging paging = new Paging();
 		paging.setDisplayPage(5);
